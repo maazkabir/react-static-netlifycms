@@ -117,8 +117,8 @@ export default {
           cases,
         }),
         children: cases.map(cases => ({
-          path: `/post/${cases.data.slug}`,
-          component: 'src/containers/cases',
+          path: `/case/${cases.data.slug}`,
+          component: 'src/containers/Case',
           getData: () => ({
             cases,
           }),
