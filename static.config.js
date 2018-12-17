@@ -110,6 +110,20 @@ export default {
         })),
       },
       {
+        path: '/cases',
+        component: 'src/containers/Cases',
+        getData: () => ({
+          cases,
+        }),
+        children: cases.map(cases => ({
+          path: `/post/${cases.data.slug}`,
+          component: 'src/containers/cases',
+          getData: () => ({
+            cases,
+          }),
+        })),
+      }
+      {
         is404: true,
         component: 'src/containers/404',
       },
