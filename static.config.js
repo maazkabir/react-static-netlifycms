@@ -86,6 +86,7 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts()
+    const cases = await getCases()
     return [
       {
         path: '/',
