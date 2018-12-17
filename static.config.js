@@ -122,7 +122,7 @@ export default {
             cases,
           }),
         })),
-      }
+      },
       {
         is404: true,
         component: 'src/containers/404',
