@@ -19,3 +19,16 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "cases" # Used in routes, e.g., /admin/collections/blog
+    label: "case" # Used in the UI
+    folder: "src/cases" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{casename}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter. 
+    # Remove any that aren't needed for posts
+      - {label: "company", name: "company", widget: "string", default: "Zyppys"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "What we did", name: "whatwedid", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
